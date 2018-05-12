@@ -12,6 +12,45 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Create Views
+        let view = UIView()
+        view.clearsContextBeforeDrawing = false
+        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        let button = UIButton(type: .roundedRect)
+        button.titleLabel?.lineBreakMode = .byTruncatingMiddle
+        button.isOpaque = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Button", for: .normal)
+        
+        // Assemble View Hierarchy
+        view.addSubview(button)
+        
+        // Configure Constraints
+        NSLayoutConstraint(
+            item: button,
+            attribute: .centerX,
+            relatedBy: .equal,
+            toItem: view,
+            attribute: .centerX,
+            multiplier: 1.0,
+            constant: 0.0)
+            .isActive = true
+        
+        NSLayoutConstraint(
+            item: button,
+            attribute: .centerY,
+            relatedBy: .equal,
+            toItem: view,
+            attribute: .centerY,
+            multiplier: 1.0,
+            constant: 0.0)
+            .isActive = true
+        
+        // Remaining Configuration
+        self.view = view
 
         // Do any additional setup after loading the view.
     }
