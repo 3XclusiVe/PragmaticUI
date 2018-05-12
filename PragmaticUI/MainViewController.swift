@@ -10,8 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
+        
         
         // Create Views
         let view = UIView()
@@ -52,8 +53,13 @@ class MainViewController: UIViewController {
         
         // Remaining Configuration
         self.view = view
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
     // MARK: - UI Actions

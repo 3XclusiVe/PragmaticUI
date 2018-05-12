@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - UIViewController Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
         
         textField.delegate = self
-        
+        view.backgroundColor = .white
         view.addSubview(textField)
         view.addSubview(button)
         view.addSubview(label)
