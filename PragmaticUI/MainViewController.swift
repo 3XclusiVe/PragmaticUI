@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,7 +63,8 @@ class MainViewController: UIViewController {
         print("presed")
         
         let vc = ViewController()
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.present(aObjNavi, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

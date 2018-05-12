@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,10 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         
         // Allocate memory for an instance of the 'MainViewController' class
-        let mainViewController = MainViewController(nibName: "MainViewController", bundle: nil) //ViewController()//ViewController(nibName: "MainView", bundle: nil)
+        let mainViewController = MainViewController()
+        //MainViewController(nibName: "MainViewController", bundle: nil) //ViewController()//ViewController(nibName: "MainView", bundle: nil)
         
-        // Set the root view controller of the app's window
-        window!.rootViewController = mainViewController
+        navigationController = UINavigationController(rootViewController: mainViewController)
+        window!.rootViewController = navigationController
         
         // Make the window visible
         window!.makeKeyAndVisible()
