@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         
         // Allocate memory for an instance of the 'MainViewController' class
-        let mainViewController = ViewController()//ViewController(nibName: "MainView", bundle: nil)
+        let mainViewController = MainViewController(nibName: "MainViewController", bundle: nil) //ViewController()//ViewController(nibName: "MainView", bundle: nil)
         
         // Set the root view controller of the app's window
         window!.rootViewController = mainViewController
