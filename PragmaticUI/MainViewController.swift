@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
         button.isOpaque = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Button", for: .normal)
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchDown)
         
         // Assemble View Hierarchy
         view.addSubview(button)
@@ -53,6 +54,16 @@ class MainViewController: UIViewController {
         self.view = view
 
         // Do any additional setup after loading the view.
+    }
+    
+    // MARK: - UI Actions
+    @objc func buttonPressed() {
+        // Print Hello followed by the user inputed string
+        // The exclamation point is added to unwrap the optional
+        print("presed")
+        
+        let vc = ViewController()
+        self.present(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
