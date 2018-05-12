@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		CE6B6A1520A71412000D0FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6A1420A71412000D0FB9 /* AppDelegate.swift */; };
 		CE6B6A1720A71412000D0FB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6A1620A71412000D0FB9 /* ViewController.swift */; };
-		CE6B6A1A20A71412000D0FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6B6A1820A71412000D0FB9 /* Main.storyboard */; };
 		CE6B6A1C20A71412000D0FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6B6A1B20A71412000D0FB9 /* Assets.xcassets */; };
 		CE6B6A1F20A71412000D0FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6B6A1D20A71412000D0FB9 /* LaunchScreen.storyboard */; };
+		CE6B6A2720A7154D000D0FB9 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6B6A2620A7154D000D0FB9 /* MainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE6B6A1120A71412000D0FB9 /* PragmaticUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6B6A1420A71412000D0FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6B6A1620A71412000D0FB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE6B6A1920A71412000D0FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6B6A1B20A71412000D0FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6B6A1E20A71412000D0FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6B6A2020A71412000D0FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6B6A2620A7154D000D0FB9 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView.xib; path = ViewsSupportingFiles/MainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			children = (
 				CE6B6A1420A71412000D0FB9 /* AppDelegate.swift */,
 				CE6B6A1620A71412000D0FB9 /* ViewController.swift */,
-				CE6B6A1820A71412000D0FB9 /* Main.storyboard */,
+				CE6B6A2620A7154D000D0FB9 /* MainView.xib */,
 				CE6B6A1B20A71412000D0FB9 /* Assets.xcassets */,
 				CE6B6A1D20A71412000D0FB9 /* LaunchScreen.storyboard */,
 				CE6B6A2020A71412000D0FB9 /* Info.plist */,
@@ -124,8 +124,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6B6A1F20A71412000D0FB9 /* LaunchScreen.storyboard in Resources */,
+				CE6B6A2720A7154D000D0FB9 /* MainView.xib in Resources */,
 				CE6B6A1C20A71412000D0FB9 /* Assets.xcassets in Resources */,
-				CE6B6A1A20A71412000D0FB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,14 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE6B6A1820A71412000D0FB9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE6B6A1920A71412000D0FB9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE6B6A1D20A71412000D0FB9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -211,12 +203,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,10 +255,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
